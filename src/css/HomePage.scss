@@ -1,0 +1,261 @@
+/* ============================================= */
+/* 1. Variabile de Design (COMPLETE)             */
+/* ============================================= */
+:root {
+  /* Fonturi complete */
+  --body-1-bold-font-family: "Poppins", Helvetica, sans-serif;
+  --body-1-bold-font-size: 24px;
+  --body-1-bold-line-height: 32px;
+  --body-1-bold-font-weight: 600;
+
+  --body-2-bold-font-family: "Poppins", Helvetica, sans-serif;
+  --body-2-bold-font-size: 16px;
+  --body-2-bold-line-height: 24px;
+  --body-2-bold-font-weight: 500;
+
+  --caption-bold-font-family: "Poppins", Helvetica, sans-serif;
+  --caption-bold-font-size: 14px;
+  --caption-bold-line-height: 24px;
+  --caption-bold-font-weight: 500;
+
+  --caption-2-bold-font-family: "Poppins", Helvetica, sans-serif;
+  --caption-2-bold-font-size: 12px;
+  --caption-2-bold-line-height: 20px;
+  --caption-2-bold-font-weight: 600;
+
+  --caption-font-family: "Poppins", Helvetica, sans-serif;
+  --caption-font-size: 14px;
+  --caption-line-height: 24px;
+  --caption-font-weight: 400;
+
+  --caption-2-font-family: "Poppins", Helvetica, sans-serif;
+  --caption-2-font-size: 12px;
+  --caption-2-line-height: 20px;
+  --caption-2-font-weight: 400;
+
+  /* Variabila lipsă pentru titlu, acum adăugată */
+  --headline-4-font-family: "DM Sans", Helvetica, sans-serif;
+  --headline-4-font-size: 32px;
+  --headline-4-font-weight: 700;
+  --headline-4-line-height: 40px;
+
+  /* Culori */
+  --neutrals-1: #141416; // Fundal principal
+  --neutrals-2: #23262f; // Fundal carduri/elemente
+  --neutrals-4: #777e90; // Text secundar
+  --neutrals-6: #e6e8ec; // Text
+  --neutrals-8: #fcfcfd; // Text principal/titluri
+  --primary-orange: #f67051;
+  --primary-red: #ef466f;
+  --primary-green: #34c759;
+}
+
+
+/* ============================================= */
+/* 2. Stiluri Generale pentru Pagină           */
+/* ============================================= */
+.page.home-page {
+  background-color: var(--neutrals-1);
+  color: var(--neutrals-8);
+
+  .navbar {
+    background: transparent;
+    --f7-navbar-height: 60px; /* Ajustează înălțimea dacă e necesar */
+    .navbar-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--neutrals-8);
+      span {
+        color: var(--primary-orange);
+      }
+    }
+    .right a {
+      color: var(--neutrals-8);
+    }
+  }
+}
+
+/* ============================================= */
+/* 3. Secțiunea de Semnale (Signals)           */
+/* ============================================= */
+.signals-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 16px; /* Adaugă spațiu sub titlu */
+  span {
+    font-family: var(--headline-4-font-family); /* Acum va funcționa */
+    font-size: var(--headline-4-font-size);
+    font-weight: var(--headline-4-font-weight);
+    line-height: var(--headline-4-line-height);
+  }
+  a {
+    color: var(--neutrals-4);
+  }
+}
+
+.signals-swiper {
+  padding: 0 16px; 
+  .swiper-slide {
+    width: auto;
+  }
+}
+
+.signal-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--neutrals-2);
+  padding: 12px;
+  border-radius: 16px;
+
+  .coin-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .coin-info {
+    .coin-name {
+      font-family: var(--caption-bold-font-family);
+      font-size: var(--caption-bold-font-size);
+      font-weight: 500;
+      color: var(--neutrals-8);
+    }
+    .coin-tag {
+      font-family: var(--caption-2-bold-font-family);
+      font-size: var(--caption-2-bold-font-size);
+      font-weight: 600;
+      &.green { color: var(--primary-green); }
+      &.red { color: var(--primary-red); }
+    }
+  }
+}
+
+/* ============================================= */
+/* 4. Cardul "Pulse"                           */
+/* ============================================= */
+.pulse-card {
+  height: 460px;
+  border-radius: 24px;
+  background-color: var(--neutrals-2);
+  margin: 24px 16px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  .pulse-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20, 20, 22, 0.7) 0%, rgba(20, 20, 22, 0.95) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .pulse-header {
+    display: flex;
+    justify-content: space-between;
+    
+    .pulse-title-section {
+        .pulse-title {
+            font-family: var(--body-1-bold-font-family);
+            font-size: var(--body-1-bold-font-size);
+            font-weight: 600;
+        }
+        .pulse-subtitle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--neutrals-6);
+            font-family: var(--caption-2-bold-font-family);
+        }
+    }
+    .pulse-status-section {
+        text-align: right;
+        .pulse-status {
+            color: var(--primary-red);
+            font-family: var(--body-2-bold-font-family);
+            font-weight: 500;
+        }
+        .pulse-time {
+            color: var(--neutrals-4);
+            font-family: var(--caption-2-font-family);
+        }
+    }
+  }
+  
+  .pulse-play-button {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    color: white;
+  }
+  
+  .pulse-input-field {
+    display: flex;
+    align-items: center;
+    background-color: rgba(35, 38, 47, 0.8);
+    border: 1px solid var(--neutrals-4);
+    border-radius: 90px;
+    padding: 0 16px;
+    height: 48px;
+    
+    input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: var(--neutrals-8);
+      font-family: var(--caption-font-family);
+      &::placeholder {
+        color: var(--neutrals-4);
+      }
+    }
+    svg {
+        color: var(--neutrals-4);
+    }
+  }
+}
+
+/* ============================================= */
+/* 5. Bara de Navigare Inferioară              */
+/* ============================================= */
+.bottom-toolbar {
+  background-color: #1a1b1e !important; /* !important poate fi necesar pentru a suprascrie F7 */
+  justify-content: space-around;
+  align-items: center;
+  --f7-toolbar-height: 80px; /* Spațiu pentru butonul ridicat */
+  
+  a {
+    color: var(--neutrals-4);
+    &.link-active {
+        color: var(--primary-orange);
+    }
+  }
+
+  .search-button-wrapper {
+    .search-button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--primary-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-30px); // Ridică butonul
+      box-shadow: 0 8px 20px rgba(246, 112, 81, 0.3);
+    }
+  }
+}

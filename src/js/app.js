@@ -4,12 +4,16 @@ import { createRoot } from "react-dom/client";
 
 // Import Framework7
 import Framework7 from "framework7/lite-bundle";
+import "swiper/element/bundle"; // defineCustomElements() pentru <swiper-container> etc.
 
 // Import Framework7-React Plugin
 import Framework7React from "framework7-react";
 
 // Import Framework7 Styles
 import "framework7/css/bundle";
+// import "./css/SignalsPage.scss";
+import "swiper/css"; // stiluri de bază
+import "swiper/css/free-mode";
 
 // Import Icons and App Custom Styles
 import "../css/icons.css";

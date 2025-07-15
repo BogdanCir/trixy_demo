@@ -1,29 +1,61 @@
+// src/pages/SignalsPage.jsx
+import React, { useState, useEffect } from 'react';
+import {
+  Page,
+  Navbar,
+  List,
+  ListItem,
+  Preloader,
+  BlockTitle,
+  Block,
+} from 'framework7-react';
+import axios from '@/services/api';
 
-// import React, { useState } from 'react';
-// import { Page, Link } from 'framework7-react';
-// import { useSignalDetails, useSearch } from '../hooks/useSignals';
-// import SearchBar from '../components/SearchBar';
-// import SignalsList from '../components/SignalsList';
-// import '../css/SignalsPage.scss';
+const SignalsPage = () => {
+  const [signals, setSignals] = useState([]);
+  const [loading, setLoading] = useState(true);
 
+  // la mount, preia semnalele de la server
+  useEffect(() => {
+    const fetchSignals = async () => {
+      try {
+        const { data } = await axios.get('/signals');
+        setSignals(data);
+      } catch (err) {
+        console.error('Eroare la fetch signals:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchSignals();
+  }, []);
 
-// export default function SignalsPage({ f7router, route }) {
-//   const { symbol } = route.params;
-//   const details = useSignalDetails(symbol);
-//   const [query, setQuery] = useState('');
+  return (
+    <Page>
+      <Navbar backLink="Înapoi" title="Signals" />
+      {loading && (
+        <Block>
+          <Preloader /> Încarc semnale…
+        </Block>
+      )}
+      {!loading && (
+        <>
+          <BlockTitle>Suggestions</BlockTitle>
+          <List mediaList>
+            {signals.map((s) => (
+              <ListItem
+                key={s.symbol}
+                title={s.name}
+                text={s.signalType}
+                after={s.timeAgo}
+                link={`/signals/${s.symbol}/`}
+              />
+            ))}
+          </List>
+        </>
+      )}
+    </Page>
+  );
+};
 
-//   const suggestions = useSearch(query);
-
-//   return (
-//     <Page className="signals-page">
-//       <div className="header">
-//         <Link iconF7="chevron_left" onClick={() => f7router.back()} />
-//         <h1>Signals</h1>
-//         <Link iconF7="menu" />
-//       </div>
-//       <SearchBar query={query} onChange={setQuery} />
-//       <SignalsList title="Suggestions" items={suggestions} />
-//       <SignalsList title="Search History" items={details.history} />
-//     </Page>
-//   );
-// }
+export default SignalsPage;

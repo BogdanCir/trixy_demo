@@ -1,6 +1,7 @@
 import SplashPage from "../pages/SplashPage.jsx";
 import OnboardingPage from "../pages/OnboardingPage.jsx";
-// import HomePage from "../pages/home.jsx";
+import HomePage from "../pages/HomePage.jsx";
+import SignalsPage from "../pages/SignalsPage.jsx";
 
 const routes = [
   {
@@ -13,6 +14,17 @@ const routes = [
     path: "/onboarding/",
     component: OnboardingPage,
   },
+  // ---------------------------------------------
+  {
+    path: "/home/",
+    component: HomePage,
+    // când dai click pe „Signals” vei naviga aici:
+  },
+  {
+    path: "/signals/",
+    component: SignalsPage,
+  },
+  // --------------------------------------------
   // {
   //   path: "/signals/:symbol/",
   //   component: SignalsPage,
