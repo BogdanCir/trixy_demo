@@ -14,5 +14,14 @@ instance.interceptors.request.use((config) => {
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
+// Named exports for API calls
+export async function fetchSignals() {
+  const { data } = await instance.get("/signals");
+  return data;
+}
 
+export async function fetchPulse() {
+  const { data } = await instance.get("/pulse");
+  return data;
+}
 export default instance;

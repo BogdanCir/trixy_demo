@@ -10,10 +10,7 @@ const SplashPage = () => {
       noNavbar
       noSwipeback
     >
-      {/* 
-        Un Link plin-ecran: orice click pe această zonă navighează imediat 
-        la /onboarding/ (replace: nu pune splash în istorie)
-      */}
+
       <Link
         href="/onboarding/"
         replace

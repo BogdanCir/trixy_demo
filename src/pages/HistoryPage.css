@@ -1,0 +1,105 @@
+.history-page {
+    background: linear-gradient(
+      50deg,
+      var(--Neutrals-1, #141416) 0%,
+      #23262F 100%,
+      #1e1f25 100%,
+      #0f0f13 100%
+  );
+  
+}
+.history-subtitle {
+  margin: 0 24px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #b0b0b0;
+}
+
+.history-list {
+  padding-bottom: 32px;
+}
+
+.history-entry {
+  margin: 0 24px 20px;
+}
+
+.history-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.history-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #b0b0b0;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.history-date {
+  display: flex;
+  align-items: center;
+  color: #777e90;
+  font-size: 12px;
+  gap: 6px;
+  position: relative;
+}
+
+.history-clock-icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5;
+}
+
+.history-divider {
+  height: 1px;
+  background-color: #2f3139;
+  margin-top: 8px;
+}
+
+.history-add-button {
+  /* all: unset; */
+  position: fixed;
+  right: 24px;
+  bottom: 111px;
+  background-color: #2c2f36;
+  border-radius: 12px;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.history-add-button:hover {
+  background-color: #383c46;
+}
+
+.history-add-button svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+}
+/* Forțează transparent pe iOS/Material pentru Navbar */
+.ios .signals-navbar .navbar-bg,
+.md  .signals-navbar .navbar-bg {
+  background: transparent !important;
+  opacity: 1 !important;
+}
+
+/* Variabile și culori pentru bara de sus */
+.signals-navbar {
+  --f7-navbar-bg-color: transparent;
+  --f7-bars-bg-color: transparent;
+  --f7-navbar-border-color: transparent;
+  --f7-bars-text-color: #fff;
+  --f7-navbar-text-color: #fff;
+  --f7-navbar-link-color: #fff;
+  background: transparent !important;
+}

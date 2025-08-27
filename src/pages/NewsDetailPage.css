@@ -1,0 +1,135 @@
+.news-detail-page {
+  background: linear-gradient(50deg, var(--Neutrals-1, #141416) 0%, #23262f 100%, #1e1f25 100%, #0f0f13 100%);
+  color: white;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.news-hero-wrapper { position: relative; }
+.news-hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.floating-header {
+  position: absolute;
+  top: 16px; left: 16px; right: 16px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.icon-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.dark-bg { background-color: #141416; }
+.right-actions { display: flex; gap: 8px; }
+
+.news-block { padding: 24px; }
+.news-title { font-size: 22px; font-weight: 600; margin-bottom: 12px; color: white; }
+.news-excerpt { font-size: 14px; color: #b1b5c3; margin-bottom: 16px; }
+
+.news-author { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.author-avatar { width: 24px; height: 24px; border-radius: 50%; object-fit: cover; }
+.author-name { font-size: 13px; color: #e6e8ec; }
+.curated-by-label { color:#777E90 }
+
+.horizontal-scroll-container.mini {
+  display: flex;
+  overflow-x: auto;
+  padding: 8px 12px 16px;
+  gap: 8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.horizontal-mini-card {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  min-width: 180px;
+  max-width: 200px;
+}
+.mini-card {
+  background-color: #23262F;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  padding: 10px;
+}
+.mini-card:hover { transform: translateY(-3px); background-color: #2b2f3a; }
+.mini-card-content { display: flex; flex-direction: column; gap: 8px; }
+.mini-card-title {
+  font-size: 13px; font-weight: 600; color: #FCFCFD; line-height: 1.3;
+  max-height: 34px; overflow: hidden; text-overflow: ellipsis;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.mini-card-footer { display: flex; align-items: center; gap: 8px; }
+.mini-card-avatar { width: 24px; height: 24px; border-radius: 50%; object-fit: cover; }
+.mini-card-subtitle { font-size: 12px; color: #E6E8EC; }
+
+.news-section { margin: 16px 0 24px; color: #FCFCFD; }
+.news-section h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.news-section p { font-size: 14px; line-height: 1.5; color: #E6E8EC; }
+
+.news-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; }
+.source-tag {
+  font-size: 12px; color: #777;
+  background-color: #1e1f25; padding: 4px 8px; border-radius: 12px;
+}
+.action-icons { display: flex; gap: 12px; }
+.text-light { color: #FCFCFD!important; }
+.list .item-title { white-space: normal; word-break: break-word; }
+
+.horizontal-scroll-container {
+  display: flex; overflow-x: auto; padding: 0 16px 24px; gap: 12px;
+  scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+}
+.horizontal-bookmark-card { min-width: 100px!important; flex-shrink: 0; scroll-snap-align: start; }
+.bookmark-card { background-color: #23262F; border-radius: 16px; overflow: hidden; }
+.bookmark-card-content { display: flex; align-items: center; padding: 8px; }
+.bookmark-image { width: 56px; height: 56px; border-radius: 16px; object-fit: cover; margin-right: 12px; }
+.bookmark-text { flex: 1; }
+.bookmark-title { font-size: 14px; font-weight: 500; color: #777E90; }
+
+.discover-article-card { text-decoration: none; display: block; color: inherit; }
+
+.fu-followup-input{
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 100;
+  display:flex; gap:8px; align-items:center;
+  background: #23262F; border-radius: 90px;
+  outline: 2px solid #1B1D23; outline-offset: -2px;
+  padding: 10px 12px 10px 16px;
+}
+.fu-followup-input input{
+  flex:1; border:none; outline:none; background:transparent;
+  color:#F4F5F6; font-size:14px; font-family: Poppins, system-ui, sans-serif;
+}
+.fu-mic-btn{
+  width:36px; height:36px; border-radius:100px; border:none;
+  background:#353945; color:#F4F5F6; display:flex; align-items:center; justify-content:center;
+}
+
+/* Forțează dark tema pentru liste/accordion doar în pagina asta */
+.news-detail-page .list {
+  --f7-list-bg-color: transparent;
+  --f7-list-item-border-color: #353945;
+  --f7-list-item-title-text-color: #FCFCFD;
+  --f7-list-item-after-text-color: #B1B5C3;
+  --f7-text-color: #FCFCFD;
+}
+
+/* Scoate orice fundal alb din item */
+.news-detail-page .list .item-content {
+  background: transparent !important;
+}
+
+/* Titlu și conținut în culoarea dorită */
+.news-detail-page .list .item-title {
+  color: #FCFCFD !important;
+}
+.news-detail-page .list .accordion-item-content,
+.news-detail-page .list .accordion-item-opened .item-content {
+  background: transparent !important;
+}

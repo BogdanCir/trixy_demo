@@ -1,0 +1,126 @@
+.profile-page{
+  background: linear-gradient(
+    50deg,
+    var(--Neutrals-1, #141416) 0%,
+    #23262F 100%,
+    #1e1f25 100%,
+    #0f0f13 100%
+  );
+  color:#fff;
+}
+
+/* Navbar spacing + close button rotund */
+.profile-navbar .navbar-inner{
+  padding: calc(env(safe-area-inset-top,0px) + 12px) 16px 12px;
+}
+.profile-navbar .profile-title{
+  font-size:24px; font-weight:600; color:#fff;
+  text-align:left; margin:84px 24px 16px;
+}
+.profile-navbar .profile-title .profile-span{ margin-left:10px; }
+
+.close-round{
+  width:34px; height:34px; border-radius:50%;
+  display:grid; place-items:center;
+  /* background: rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14); */
+  color:#fff !important;
+}
+
+/* ==== User Card ==== */
+.profile-card{
+  background:#141416;
+  border-radius:16px;
+  margin: 0 24px 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.45);
+}
+.profile-card-content{
+  display:flex; align-items:center; gap:16px; padding:16px;
+}
+.profile-avatar{
+  width:56px; height:56px; border-radius:50%; object-fit:cover;
+  border:2px solid #353945;
+}
+.profile-user-info{ display:flex; flex-direction:column; }
+.profile-name{ color:#fff; font-size:18px; font-weight:800; margin:0; }
+.profile-email{ color:#9a9a9a; font-size:14px; margin:4px 0 0 0; }
+
+/* ==== Section title ==== */
+.section-title{
+  color:#f77052; font-size:16px; font-weight:700;
+  margin: 14px 24px 10px;
+}
+
+/* ==== Settings List ==== */
+/* Folosește hairlines F7 dar cu culoarea noastră */
+.settings-list {
+  --f7-list-border-color: transparent;                 /* marginile listei */
+  --f7-list-item-border-color: #353945;               /* linia dintre item-uri */
+  --f7-list-item-divider-border-color: #353945;
+}
+
+/* Fallback dacă tema dezactivează hairlines */
+.settings-list .item-inner {
+  position: relative;
+  border-bottom: 1px solid #353945;
+}
+.settings-list .item-inner:last-child {
+  border-bottom: none;
+}
+
+.settings-list .item-title{
+  color:#fff; font-size:16px; font-weight:600;
+}
+.settings-list .item-subtitle{
+  color:#9a9a9a; font-size:14px; margin-top:2px; line-height:1.35;
+}
+.settings-icon{
+  color:#9aa0aa; display:flex; align-items:center; justify-content:center;
+  width:28px;
+}
+.danger-item .item-title{ color:#f77052; }
+
+/* Toggle mai mic */
+.settings-list .toggle{
+  transform: scale(0.8);
+  transform-origin: right center;
+}
+.settings-list .item-after{ margin-right:4px; }
+
+/* ==== About / Disconnect ==== */
+.disconnect-container{
+  display:flex; justify-content:center; padding:24px;
+}
+.disconnect-button{
+  --f7-button-outline-border-color: #ffffff;
+  --f7-button-text-color: #ffffff;
+  min-width: 260px;
+  border-radius: 32px;
+}
+/* 1) Fundalul navbar-ului pe iOS/Material (inclusiv când e large) */
+.ios .profile-navbar .navbar-bg,
+.md  .profile-navbar .navbar-bg,
+.ios .profile-navbar.navbar-large .navbar-bg,
+.md  .profile-navbar.navbar-large .navbar-bg,
+.ios .profile-navbar.navbar-large-collapsed .navbar-bg,
+.md  .profile-navbar.navbar-large-collapsed .navbar-bg {
+  background: transparent !important;
+  opacity: 1 !important;
+}
+
+/* 2) Variabilele de culoare pentru bara de sus */
+.profile-navbar {
+  --f7-navbar-bg-color: transparent;
+  --f7-bars-bg-color: transparent;
+  --f7-navbar-border-color: transparent;
+  --f7-bars-text-color: #fff;
+  --f7-navbar-text-color: #fff;
+  --f7-navbar-link-color: #fff;
+  background: transparent !important;
+}
+
+/* 3) (opțional) titlul mare să fie alb constant */
+.profile-navbar .title-large-text,
+.profile-navbar .navbar .title-large-text {
+  color: #fff !important;
+}

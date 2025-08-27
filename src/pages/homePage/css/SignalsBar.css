@@ -1,0 +1,36 @@
+/* src/pages/homePage/css/SignalsBar.css */
+.signals-bar {
+  display: flex;
+  width: 609px;
+  align-items: center;
+  gap: 24px;
+  overflow-x: auto; /* scroll orizontal când depășește lățimea */
+}
+
+.signal-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.signal-item__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.signal-item__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.signal-item__name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FCFCFD;
+}
+
+.signal-item__status {
+  font-size: 12px;
+  /* culoarea rămâne inline (red/green), dar poți defini și clase .status--green/.status--red */
+}

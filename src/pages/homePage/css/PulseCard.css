@@ -1,0 +1,52 @@
+/* src/pages/homePage/css/PulseCard.css */
+.pulse-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1E1E1E; /* sau ce ai în design */
+}
+
+.pulse-card__cover {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* raport 16:9 */
+  background-size: cover;
+  background-position: center;
+}
+
+.pulse-card__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.pulse-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.pulse-card__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FCFCFD;
+}
+
+.pulse-card__status-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pulse-card__status {
+  font-size: 14px;
+  font-weight: 500;
+  color: #F77052; /* exemplu */
+}
+
+.pulse-card__elapsed {
+  font-size: 12px;
+  color: #A1A1AA;
+}

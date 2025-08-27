@@ -1,0 +1,146 @@
+/* === PAGE BACKGROUND === */
+.discover-page{
+  background: linear-gradient(
+    50deg,
+    var(--Neutrals-1, #141416) 0%,
+    #23262f 100%,
+    #1e1f25 100%,
+    #0f0f13 100%
+  );
+  min-height: 100vh;
+}
+
+/* === NAVBAR === */
+.signals-navbar .navbar-inner{
+  padding: calc(env(safe-area-inset-top,0px) + 12px) 16px 12px;
+}
+.signals-navbar .signals-title{
+  font-size:24px; font-weight:600; color:#fff; text-align:left;
+  margin:84px 24px 16px;
+}
+.signals-navbar .signals-title .signals-span{ margin-left:10px; }
+
+/* === TABS === */
+.discover-tabs{
+  display:flex; gap:8px; overflow-x:auto; padding:0 16px; margin-bottom:24px;
+  scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+}
+.discover-tabs::-webkit-scrollbar{ display:none; }
+.discover-tab{
+  padding:8px 16px; font-size:14px; font-weight:500;
+  background:#23262f; color:#b0b0b0; border:0; border-radius:20px;
+  white-space:nowrap; scroll-snap-align:start; transition:all .25s ease;
+}
+.discover-tab.active{ background:#fff; color:#111; }
+
+/* === CARD ROOT === */
+.discover-article-card{
+  margin:0 16px 24px; border-radius:16px; overflow:hidden;
+  background:transparent; box-shadow:none;
+}
+
+/* === IMAGE === */
+.card-image-wrapper{ position:relative; border-radius:16px; overflow:hidden; }
+.card-image{ width:100%; height:auto; display:block; border-radius:16px; object-fit:cover; }
+
+/* === OVERLAY CONTENT (mov) === */
+.card-overlay-content{
+  position:absolute; left:16px; right:16px; bottom:16px;
+  background:#9757D7; border-radius:16px; padding:12px;
+  display:flex; flex-direction:column; gap:8px; color:#fff;
+}
+.card-overlay-content h3{ font-size:16px; font-weight:600; line-height:24px; margin:0; }
+.card-overlay-content p{ font-size:13px; line-height:1.4; margin:0; color:#E6E8EC; }
+
+.card-author{ display:flex; align-items:center; gap:8px; margin-top:4px; }
+.card-avatar{ width:19px; height:19px; border-radius:48px; object-fit:cover; }
+.author-name{ font-size:12px; color:#E6E8EC; }
+
+/* === CUSTOM TABBAR === */
+.bottom-tabbar-custom{
+  background:transparent;
+  backdrop-filter: blur(16px)!important;
+  -webkit-backdrop-filter: blur(16px)!important;
+  border-top:1px solid rgba(255,255,255,.1)!important;
+  height:84px; display:flex; justify-content:space-around; align-items:center;
+}
+.bottom-tabbar-custom a{ display:flex; justify-content:center; align-items:center; }
+.tabbar-link{
+  display:flex; align-items:center; justify-content:center; flex-direction:column;
+  padding:10px; border-radius:12px; transition:all .2s ease;
+}
+.bottom-tabbar-custom .tabbar-link.active{
+  background:#F77052; border-radius:50%; width:44px; height:44px;
+}
+
+
+.prefs-card{
+   width: min(92vw, 360px);
+  max-height: 80vh;
+  overflow: auto;
+  background: #141416;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 24px 60px rgba(0,0,0,.55);
+}
+
+/* header + buton X rotund */
+.prefs-header{
+  position:relative;
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:6px;
+}
+.prefs-header h3{
+  color:#fff; font-size:22px; font-weight:800; margin:0;
+}
+.close-pill{
+  width:36px; height:36px; border-radius:50%;
+  display:grid; place-items:center;
+  background:#141416;
+  border:1px solid rgba(255,255,255,.14);
+  color:#fff;
+}
+
+/* subtitlu */
+.prefs-sub{
+  color:#c9ced6; font-size:14px; line-height:1.35;
+  margin: 4px 0 14px;
+}
+
+.prefs-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.prefs-card .pref-chip{
+  appearance:none; -webkit-appearance:none;
+  border:0; outline:0;
+  display:inline-flex !important;
+  align-items:center; justify-content:center;
+  width:auto !important; max-width:100%;
+  padding:10px 14px;
+  border-radius:999px;
+  font-size:14px; font-weight:600;
+  background:#2c2f39;  /* neactiv */
+  color:#e6e8ec;
+  white-space:nowrap;
+}
+.prefs-card .pref-chip.active{
+  background:#ffffff;
+  color:#111;
+}
+
+.prefs-save{
+  --f7-button-bg-color:#F77052;
+  --f7-button-text-color:#fff;
+  margin-top:16px;
+  height:48px;
+  border-radius:98px;
+}
+
+.prefs-card::-webkit-scrollbar{ width:8px; }
+.prefs-card::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,.12);
+  border-radius:999px;
+}

@@ -1,0 +1,83 @@
+.preferences-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preferences-content {
+  position: relative;
+  margin: 40px auto;
+  padding: 24px;
+  max-width: 320px;
+  width: 100%;
+  background: #141416;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.preferences-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.preferences-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.preferences-subtitle {
+  color: #9a9a9a;
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.tag {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #23262f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.tag.selected {
+  background: white;
+  color: #141416;
+}
+
+.preferences-save-btn {
+  background: #f77052;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
